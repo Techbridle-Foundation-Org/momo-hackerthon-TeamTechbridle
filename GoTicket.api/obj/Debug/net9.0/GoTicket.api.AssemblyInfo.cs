@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GoTicket.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+714aacb609edd43fea57d9f28e02bbf4007524bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09ca67d70e8efb03704de61a134e4b0d2803dd5b")]
 [assembly: System.Reflection.AssemblyProductAttribute("GoTicket.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GoTicket.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

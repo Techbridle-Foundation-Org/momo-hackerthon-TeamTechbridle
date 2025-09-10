@@ -75,19 +75,19 @@
     ]
   },
   "packageFolders": {
-    "/home/khulysojohn/.nuget/packages/": {}
+    "/Users/admin/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/khulysojohn/Development/momo-hackerthon-TeamTechbridle/GoTicket.api/GoTicket.api.csproj",
+      "projectUniqueName": "/Users/admin/Documents/Development/momo-hackerthon-TeamTechbridle/GoTicket.api/GoTicket.api.csproj",
       "projectName": "GoTicket.api",
-      "projectPath": "/home/khulysojohn/Development/momo-hackerthon-TeamTechbridle/GoTicket.api/GoTicket.api.csproj",
-      "packagesPath": "/home/khulysojohn/.nuget/packages/",
-      "outputPath": "/home/khulysojohn/Development/momo-hackerthon-TeamTechbridle/GoTicket.api/obj/",
+      "projectPath": "/Users/admin/Documents/Development/momo-hackerthon-TeamTechbridle/GoTicket.api/GoTicket.api.csproj",
+      "packagesPath": "/Users/admin/.nuget/packages/",
+      "outputPath": "/Users/admin/Documents/Development/momo-hackerthon-TeamTechbridle/GoTicket.api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/khulysojohn/.nuget/NuGet/NuGet.Config"
+        "/Users/admin/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -111,7 +111,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -141,7 +141,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
