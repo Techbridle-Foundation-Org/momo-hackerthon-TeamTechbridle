@@ -1,6 +1,0 @@
-@GoTicket.api_HostAddress = http://localhost:5294
-
-GET {{GoTicket.api_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
