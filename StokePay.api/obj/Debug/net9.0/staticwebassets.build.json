@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "7O1aS6zw2G+YWdkjWj3O4G2f68VTdtzisEoXJr8Ifro=",
+  "Source": "StokePay.api",
+  "BasePath": "_content/StokePay.api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

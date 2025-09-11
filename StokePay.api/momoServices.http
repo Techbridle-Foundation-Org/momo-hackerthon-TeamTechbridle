@@ -1,0 +1,28 @@
+### 1️⃣ Get Access Token
+POST http://localhost:5294/api/momo/token
+Content-Type: application/json
+
+# Optional body if your endpoint requires it
+{}
+
+### 2️⃣ Request a Payment
+POST http://localhost:5294/api/momo/pay
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSMjU2In0.eyJjbGllbnRJZCI6ImM2YWE5NzM4LTdlNmItNGRlNS1hZDhjLTk0N2ZiZGVlMDMyZiIsImV4cGlyZXMiOiIyMDI1LTA5LTExVDA2OjMzOjM1LjMwNiIsInNlc3Npb25JZCI6ImE4MjVmN2EzLWI2OTktNGYzZC1iZTU4LTQzN2E0MmJlZWQ2ZCJ9.Md_3ql2rdH1r8M_JssU2oZCzZw1kj77ZehaHLPmU3nV8Mu3rwByuZpsKdij_tjOkegr5yP87mGSo-sMHBnRnl7phMvhmXZGKcPEEQehPi_1S-SCRcLKaMNivR6g1QajkKZBihyj_x70_740kOBNVVEpJjdwUrwhn7wsj-VHRPAs7MDQ3vKczCAEHgBCaT2KPrejBwACS4PvULgBd2dA5tqGQ_9VxX4hxok6q1OHU2f_htKk9TvPK81PkNo_ippyBg8Mc1mDYsx0r0cpwDpxxULFv9XaokTGUYnCxOMwO_kFyYYt4Oe_rIpZJ5A5F5nDySKTQxhB7rq6CuywlN64wWA
+X-Reference-Id: "d3d82924-86da-418b-bf0e-5eb6187ce187"
+
+{
+    "Amount": "1.5",
+    "Currency": "ZAR",
+    "ExternalId": "INTEL-2024",
+    "payer": {
+        "partyIdType": "MSISDN",
+        "partyId": "27818854153"
+    },
+    "payerMessage": "Success",
+    "payeeNote": "noted"
+}
+
+
+### 3️⃣ Check Payment Status
+GET http://localhost:5136/api/momo/status/INV-12345
