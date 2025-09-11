@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StokePay.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b26f83724bcf2b6fad7c4c446d50d24a4830f7c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+537fd09dcda95b0b2e06e097690599d05f915234")]
 [assembly: System.Reflection.AssemblyProductAttribute("StokePay.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StokePay.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

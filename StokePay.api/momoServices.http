@@ -1,28 +1,46 @@
-### 1️⃣ Get Access Token
+### Get Access Token
 POST http://localhost:5294/api/momo/token
 Content-Type: application/json
 
-# Optional body if your endpoint requires it
 {}
 
-### 2️⃣ Request a Payment
+### Request a Payment
 POST http://localhost:5294/api/momo/pay
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSMjU2In0.eyJjbGllbnRJZCI6ImM2YWE5NzM4LTdlNmItNGRlNS1hZDhjLTk0N2ZiZGVlMDMyZiIsImV4cGlyZXMiOiIyMDI1LTA5LTExVDA2OjMzOjM1LjMwNiIsInNlc3Npb25JZCI6ImE4MjVmN2EzLWI2OTktNGYzZC1iZTU4LTQzN2E0MmJlZWQ2ZCJ9.Md_3ql2rdH1r8M_JssU2oZCzZw1kj77ZehaHLPmU3nV8Mu3rwByuZpsKdij_tjOkegr5yP87mGSo-sMHBnRnl7phMvhmXZGKcPEEQehPi_1S-SCRcLKaMNivR6g1QajkKZBihyj_x70_740kOBNVVEpJjdwUrwhn7wsj-VHRPAs7MDQ3vKczCAEHgBCaT2KPrejBwACS4PvULgBd2dA5tqGQ_9VxX4hxok6q1OHU2f_htKk9TvPK81PkNo_ippyBg8Mc1mDYsx0r0cpwDpxxULFv9XaokTGUYnCxOMwO_kFyYYt4Oe_rIpZJ5A5F5nDySKTQxhB7rq6CuywlN64wWA
-X-Reference-Id: "d3d82924-86da-418b-bf0e-5eb6187ce187"
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSMjU2In0.eyJjbGllbnRJZCI6ImM2YWE5NzM4LTdlNmItNGRlNS1hZDhjLTk0N2ZiZGVlMDMyZiIsImV4cGlyZXMiOiIyMDI1LTA5LTExVDA5OjE3OjI0LjU3OCIsInNlc3Npb25JZCI6IjdhMTYzOWY2LTQxOWQtNGY4OS04NzZkLWU5NDQ3OGQzMzEzMyJ9.NoqD2CvPm29h03-vvyNCopKRsxce3pilLfTeUtirxoGS2OMeJAvhnJmoKbNN9J63ChVh51lViBOPXoubwCj-GRhiRGI1DlObXK08dB2cuq9KSto5yqKNeaURgH60Kqi18q17F_IpawGCCZxy0ntpusn9H8w5TXzaImnQ1sswjQk3k-FWz8QDP-dCuzzkBuKboMlpbiWlMpLJoPTo2v2BdCeiPvhrqUJyZW-DrcPo4UJ_r-hAd15OBHeWLqo5mIcz6KuiZr-Fs9dQFWoLz9J2ajSbP0viDu4gjReD8kOnUXp-lLz0s5WDTyc59yUza5_wV7w6RN6upjun8WwBMqy5dw
+X-Reference-Id: 17ef03a9-43ff-4391-9c45-84b8923a4733
 
 {
-    "Amount": "1.5",
-    "Currency": "ZAR",
-    "ExternalId": "INTEL-2024",
-    "payer": {
-        "partyIdType": "MSISDN",
-        "partyId": "27818854153"
-    },
-    "payerMessage": "Success",
-    "payeeNote": "noted"
+  "Amount": "1.5",
+  "Currency": "ZAR",
+  "ExternalId": "INTEL-2024",
+  "payer": {
+    "partyIdType": "MSISDN",
+    "partyId": "27818854153"
+  },
+  "payerMessage": "Success",
+  "payeeNote": "noted"
 }
 
+### Request a Withdrawal
+POST http://localhost:5294/api/momo/withdraw
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSMjU2In0.eyJjbGllbnRJZCI6ImM2YWE5NzM4LTdlNmItNGRlNS1hZDhjLTk0N2ZiZGVlMDMyZiIsImV4cGlyZXMiOiIyMDI1LTA5LTExVDEwOjI5OjI5LjI3MiIsInNlc3Npb25JZCI6ImMyMTU3MDBjLThkNTgtNGJiMi1iYzBmLTY3MjU0MmYzYTBkYiJ9.NF7JBwZoA5tGR5INcJE14GhGcIN9HeV_xdLBRA-DR9TCbfW2ETY2Vf1D1LBPBPlTKNxkjckCxyPFMyIlOo4OBQ3a9vE3RG4F1RRzPq1lWyAAneY5GRkoo326GBrtv8Yx0JWmgh1RhygPiVts0OCcVlr-Gu9J1PyvxJFe_oviKPzm77K5maoTZtV8aJngVe9jmqsJ7_tpwFxRyg92J9KmTGzUyeoc9s6FWIDlz914h5jKwkl7ikj-B5kCbl4i8T42eqNoSz08nF2jYrWqlH71HbPa-VEfoGtpCw82RfrxS7aRN5DvrCjknrZC3Hj5b6dxqEypZtTx8VvAnuWFG25xig
+X-Reference-Id: 94235abb-dc40-475c-bc7a-0377038e5072
 
-### 3️⃣ Check Payment Status
-GET http://localhost:5136/api/momo/status/INV-12345
+
+{
+  "payeeNote": "noted",
+  "externalId": "INTEL-2024",
+  "amount": "1.5",
+  "currency": "ZAR",
+  "payer": {
+    "partyIdType": "MSISDN",
+    "partyId": "27818854153"
+  },
+  "payerMessage": "Success"
+}
+
+### Check Payment Status
+GET http://localhost:5294/api/momo/status/INTEL-2024
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSMjU2In0.eyJjbGllbnRJZCI6ImM2YWE5NzM4LTdlNmItNGRlNS1hZDhjLTk0N2ZiZGVlMDMyZiIsImV4cGlyZXMiOiIyMDI1LTA5LTExVDA4OjQ5OjA5Ljc0NiIsInNlc3Npb25JZCI6IjJlYTYyMzA3LWI3MmItNDEzYi1hMzQ1LTY5MDc4ZTdlNjVkYSJ9.SAvzz8sTK4UghayK6JM4ICLr55mOfnYRqJGow2S2e3NqxKUscVBdpFDDFzbYtOwE3feCpgYG4OUY5kYapHBlJF8rnqu9tpBYcAHNXbHhI-vSOdZMawyaKVNEFzm5xKIz5Wy3d59bPPEEup_nV8HC9JapylLseqZUf4PuY9v9ZNLXD98XgkO--DGjn2vhpmbR7AcJi7aoZOApQSdnGkB7sw92R55updILuUlmg__lve1_gFuQgMexnL3ljj-PD0q9jiRZdYs1xjhjhfY1m2kY9nIIA6-BQG9HiKR4bO0I_Sb-oYB1nFD6tVdrVgvnv9XZQebQ4Llg-XJS4PbXzCYDjw
