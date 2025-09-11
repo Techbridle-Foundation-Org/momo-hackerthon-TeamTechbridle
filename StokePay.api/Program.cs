@@ -10,6 +10,16 @@ builder.Services.AddControllers();
 // Bind MoMoSettings
 builder.Services.Configure<MoMoSettings>(builder.Configuration.GetSection("MoMoSettings"));
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        _ = policy.WithOrigins("http://localhost:3000")
+                  .AllowAnyMethod()
+                  .AllowAnyHeader();
+    });
+});
+
 // Register MoMoService
 builder.Services.AddHttpClient<IMoMoService, MoMoService>();
 builder.Services.AddScoped<IMoMoService, MoMoService>();
