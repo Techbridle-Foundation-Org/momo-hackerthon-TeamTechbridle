@@ -322,19 +322,19 @@
     ]
   },
   "packageFolders": {
-    "/home/khulysojohn/.nuget/packages/": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/khulysojohn/Development/momo-hackerthon-TeamTechbridle/StokePay.api/StokePay.api.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Tailwind\\Tailwint-test\\momo-hackerthon-TeamTechbridle\\StokePay.api\\StokePay.api.csproj",
       "projectName": "StokePay.api",
-      "projectPath": "/home/khulysojohn/Development/momo-hackerthon-TeamTechbridle/StokePay.api/StokePay.api.csproj",
-      "packagesPath": "/home/khulysojohn/.nuget/packages/",
-      "outputPath": "/home/khulysojohn/Development/momo-hackerthon-TeamTechbridle/StokePay.api/obj/",
+      "projectPath": "C:\\Users\\User\\Desktop\\Tailwind\\Tailwint-test\\momo-hackerthon-TeamTechbridle\\StokePay.api\\StokePay.api.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Tailwind\\Tailwint-test\\momo-hackerthon-TeamTechbridle\\StokePay.api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/khulysojohn/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -392,7 +392,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
