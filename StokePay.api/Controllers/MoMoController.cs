@@ -1,8 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using StokePay.api.Interfaces;
 using StokePay.api.Models;
-using StokePay.api.Services;
-using System.Threading.Tasks;
 
 namespace StokePay.api.Controllers
 {
@@ -17,6 +15,7 @@ namespace StokePay.api.Controllers
             _momoService = momoService;
         }
 
+       
         [HttpPost("token")]
         public async Task<IActionResult> GetToken()
         {
@@ -35,33 +34,56 @@ namespace StokePay.api.Controllers
             }
         }
 
+       
         [HttpPost("pay")]
-public async Task<IActionResult> RequestPayment([FromBody] PaymentRequestDto model)
-{
-    if (string.IsNullOrEmpty(model.Amount) || string.IsNullOrEmpty(model.Payer?.PartyId))
-        return BadRequest(new { message = "Amount and PayerNumber are required." });
+        public async Task<IActionResult> RequestPayment([FromBody] PaymentRequestDto model)
+        {
+            if (model == null || string.IsNullOrEmpty(model.Amount) || string.IsNullOrEmpty(model.Payer?.PartyId))
+                return BadRequest(new { success = false, message = "Amount and PayerNumber are required." });
 
-    try
-    {
-        var response = await _momoService.RequestPaymentAsync(model);
-        return Ok(new { success = true, data = response });
-    }
-    catch (HttpRequestException httpEx)
-    {
-        return StatusCode(502, new { success = false, error = httpEx.Message });
-    }
-    catch (Exception ex)
-    {
-        return StatusCode(500, new { success = false, error = ex.Message });
-    }
-}
+            try
+            {
+                var response = await _momoService.RequestPaymentAsync(model);
+                return Ok(new { success = true, data = response });
+            }
+            catch (HttpRequestException httpEx)
+            {
+                return StatusCode(502, new { success = false, error = httpEx.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { success = false, error = ex.Message });
+            }
+        }
 
+       
+        [HttpPost("withdraw")]
+        public async Task<IActionResult> Withdraw([FromBody] WithdrawalRequestDto request)
+        {
+            if (request == null || string.IsNullOrEmpty(request.Amount) || string.IsNullOrEmpty(request.Payer?.PartyId))
+                return BadRequest(new { success = false, message = "Amount and PayerNumber are required." });
 
+            try
+            {
+                var result = await _momoService.RequestWithdrawAsync(request);
+                return Ok(new { success = true, data = result });
+            }
+            catch (HttpRequestException httpEx)
+            {
+                return StatusCode(502, new { success = false, error = httpEx.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { success = false, error = ex.Message });
+            }
+        }
+
+        
         [HttpGet("status/{referenceId}")]
         public async Task<IActionResult> GetTransactionStatus(string referenceId)
         {
             if (string.IsNullOrEmpty(referenceId))
-                return BadRequest(new { message = "Reference ID is required." });
+                return BadRequest(new { success = false, message = "Reference ID is required." });
 
             try
             {
